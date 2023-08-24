@@ -1,0 +1,7 @@
+.movie-card {
+    width: 100%;
+}
+
+.movie-card:hover {
+    cursor: pointer;
+}
