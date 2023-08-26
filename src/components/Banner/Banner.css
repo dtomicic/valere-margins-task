@@ -1,0 +1,43 @@
+.banner {
+  background: url("/public/images/hero-image.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 185px;
+  width: 100%;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.hero-text-header {
+  text-align: center;
+  color: white;
+  font-size: 26px;
+}
+
+@media screen and (min-width: 768px) {
+  .banner {
+    height: 310px;
+  }
+
+  .hero-text-header {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .banner {
+    height: 700px;
+  }
+
+  .hero-text-header {
+    font-size: 60px;
+  }
+}
