@@ -1,12 +1,12 @@
-import "./VerticalList.css";
+import "./HorizontalList.css";
 import { IMovie } from "../../types/MovieTypes";
 
-interface IVerticalListProps {
+interface IHorizontalListProps {
   data: IMovie[];
   sectionTitle: string;
 }
 
-const VerticalList = (props: IVerticalListProps) => {
+const HorizontalList = (props: IHorizontalListProps) => {
   const { data, sectionTitle } = props;
   const renderList = data.slice(0, 10).map((movie) => {
     return (
@@ -18,11 +18,11 @@ const VerticalList = (props: IVerticalListProps) => {
     );
   });
   return (
-    <div className="vertical-list">
+    <div className="horizontal-list">
       <h2>{sectionTitle}</h2>
       <div className="list">{renderList}</div>
     </div>
   );
 };
 
-export default VerticalList;
+export default HorizontalList;

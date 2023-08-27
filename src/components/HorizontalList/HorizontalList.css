@@ -1,7 +1,8 @@
-.vertical-list {
+.horizontal-list {
     display: flex;
     flex-direction: column;
     padding: 0 12px;
+    margin-bottom: 30px;
 }
 
 .list {
