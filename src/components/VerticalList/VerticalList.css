@@ -1,0 +1,12 @@
+.vertical-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0 12px;
+}
+
+.list {
+    display: flex;
+    gap: 20px;
+    white-space: nowrap;
+    overflow: auto;
+}
