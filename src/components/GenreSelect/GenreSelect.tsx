@@ -3,7 +3,12 @@ import { IGenre } from "../../types/GenreTypes";
 import { fetchGenres } from "../../utils/Api";
 import Form from 'react-bootstrap/Form';
 
-const GenreSelect = () => {
+interface IGenreSelectProps {
+  onGenreSelect: (genreId: number) => void;
+}
+
+const GenreSelect = (props: IGenreSelectProps) => {
+  const { onGenreSelect } = props;
   const [genres, setGenres] = React.useState<IGenre[]>([]);
 
   React.useEffect(() => {
@@ -24,8 +29,8 @@ const GenreSelect = () => {
   });
 
   return (
-    <Form.Select>
-      <option>Select genre</option>
+    <Form.Select onChange={(e) => onGenreSelect(parseInt(e.target.value))}>
+      <option value={0}>Select genre</option>
       {renderOptions}
     </Form.Select>
   );
