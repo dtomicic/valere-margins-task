@@ -1,3 +1,4 @@
+import { IGenre } from "../types/GenreTypes";
 import { IMovie } from "../types/MovieTypes";
 
 const options = {
@@ -37,6 +38,25 @@ export async function fetchPaginatedData(url: string, maxPage: number) {
     }
 
     return allData;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return [];
+  }
+}
+
+export async function fetchGenres() {
+  try {
+    const genres: IGenre[] = []
+
+    const response = await fetch(
+      `https://api.themoviedb.org/3/genre/movie/list?language=en&api_key=${process.env.REACT_APP_API_KEY}`,
+      options
+    )
+
+    const data = await response.json();
+    genres.push(...data.genres);
+
+    return genres;
   } catch (error) {
     console.error("Error fetching data:", error);
     return [];
