@@ -1,7 +1,7 @@
 import React from "react";
 import { IGenre } from "../../types/GenreTypes";
 import { fetchGenres } from "../../utils/Api";
-import { Form } from "react-bootstrap";
+import Form from 'react-bootstrap/Form';
 
 const GenreSelect = () => {
   const [genres, setGenres] = React.useState<IGenre[]>([]);
@@ -24,12 +24,10 @@ const GenreSelect = () => {
   });
 
   return (
-    <div>
-      <Form.Select>
-        <option>Select genre</option>
-        {renderOptions}
-      </Form.Select>
-    </div>
+    <Form.Select>
+      <option>Select genre</option>
+      {renderOptions}
+    </Form.Select>
   );
 };
 
