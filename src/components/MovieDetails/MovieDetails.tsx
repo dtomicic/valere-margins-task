@@ -1,6 +1,7 @@
 import Image from "react-bootstrap/Image";
 import { IMovie } from "../../types/MovieTypes";
 import "./MovieDetails.css";
+import FavoriteButton from "../FavoriteButton/FavoriteButton";
 
 interface IMovieDetailsProps {
     movieDetails: IMovie;
@@ -20,6 +21,7 @@ const MovieDetails = (props: IMovieDetailsProps) => {
         <h2>{movieDetails.title}</h2>
         <p><span className="accented-text">Overview:</span> {movieDetails.overview}</p>
         <p><span className="accented-text">Release date:</span> {movieDetails.release_date}</p>
+        <FavoriteButton movie={movieDetails} />
       </div>
     </div>
   );
