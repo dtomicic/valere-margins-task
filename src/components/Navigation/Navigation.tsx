@@ -21,8 +21,8 @@ const Navigation = () => {
           className="justify-content-between"
         >
           <Nav>
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Discovery</Nav.Link>
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/discovery">Discovery</Nav.Link>
             <FavoritesDropdown />
           </Nav>
           <SearchForm onSubmit={handleSearchSubmit} />
