@@ -1,0 +1,27 @@
+.movie-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    gap: 20px;
+}
+
+.movie-details-info {
+    text-align: center;
+}
+
+.accented-text {
+    font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+    .movie-details {
+        flex-direction: row;
+        justify-content: center;
+        padding: 0 12px;
+    }
+
+    .movie-details-info {
+        max-width: 590px;
+    }
+}

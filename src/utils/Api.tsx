@@ -46,12 +46,12 @@ export async function fetchPaginatedData(url: string, maxPage: number) {
 
 export async function fetchGenres() {
   try {
-    const genres: IGenre[] = []
+    const genres: IGenre[] = [];
 
     const response = await fetch(
       `https://api.themoviedb.org/3/genre/movie/list?language=en&api_key=${process.env.REACT_APP_API_KEY}`,
       options
-    )
+    );
 
     const data = await response.json();
     genres.push(...data.genres);
@@ -60,5 +60,20 @@ export async function fetchGenres() {
   } catch (error) {
     console.error("Error fetching data:", error);
     return [];
+  }
+}
+
+export async function fetchMovieDetails(movieId: string) {
+  try {
+    const response = await fetch(
+      `https://api.themoviedb.org/3/movie/${movieId}?language=en-US&api_key=${process.env.REACT_APP_API_KEY}`,
+      options
+    );
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return {};
   }
 }
