@@ -1,3 +1,13 @@
+.movie-card {
+    position: relative;
+}
+
 .movie-card:hover {
     cursor: pointer;
+}
+
+.favorite-button {
+    position: absolute;
+    left: 40%;
+    top: 5%;
 }

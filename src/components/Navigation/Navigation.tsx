@@ -3,6 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import SearchForm from "../SearchForm/SearchForm";
 import { useNavigate } from "react-router-dom";
+import FavoritesDropdown from "../FavoritesDropdown/FavoritesDropdown";
 
 const Navigation = () => {
   const navigate = useNavigate();
@@ -22,6 +23,7 @@ const Navigation = () => {
           <Nav>
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#link">Discovery</Nav.Link>
+            <FavoritesDropdown />
           </Nav>
           <SearchForm onSubmit={handleSearchSubmit} />
         </Navbar.Collapse>
