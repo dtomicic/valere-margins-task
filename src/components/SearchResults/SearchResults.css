@@ -1,0 +1,10 @@
+.search-results {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.search-results-header {
+    font-size: 22px;
+    text-align: center;
+}

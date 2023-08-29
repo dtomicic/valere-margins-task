@@ -3,16 +3,18 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Discovery from "./pages/Discovery/Discovery";
 import Movie from "./pages/Movie/Movie";
+import SearchPage from "./pages/SearchPage/SearchPage";
 
 const App = () => {
   return (
     <>
-      <Navigation />
       <Router>
+        <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/discovery" element={<Discovery />} />
           <Route path="/movie/:movieId" element={<Movie />} />
+          <Route path="/search/:searchQuery" element={<SearchPage />} />
         </Routes>
       </Router>
     </>

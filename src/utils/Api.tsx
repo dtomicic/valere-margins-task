@@ -77,3 +77,18 @@ export async function fetchMovieDetails(movieId: string) {
     return {};
   }
 }
+
+export async function fetchSearchData(searchQuery: string) {
+  try {
+    const response = await fetch(
+      `https://api.themoviedb.org/3/search/movie?query=${searchQuery}&include_adult=false&language=en-US&page=1&api_key=${process.env.REACT_APP_API_KEY}`,
+      options
+    );
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return {};
+  }
+}
