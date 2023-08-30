@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { IMovie } from "../../types/MovieTypes";
 import { fetchMovieDetails } from "../../utils/Api";
 import MovieDetails from "../../components/MovieDetails/MovieDetails";
+import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 
 const Movie = () => {
   const { movieId = "" } = useParams();
@@ -19,9 +20,14 @@ const Movie = () => {
   if (!movieDetails) {
     return <div>Loading...</div>;
   }
+
   return (
     <section>
-      <MovieDetails movieDetails={movieDetails} />
+      {movieDetails.status_code === 34 ? (
+        <ErrorMessage message="Movie not found!" />
+      ) : (
+        <MovieDetails movieDetails={movieDetails} />
+      )}
     </section>
   );
 };
