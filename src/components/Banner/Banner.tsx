@@ -1,6 +1,6 @@
-import "./Banner.css";
-import ButtonComponent from "../ButtonComponent/ButtonComponent";
 import { Link } from "react-router-dom";
+import ButtonComponent from "../ButtonComponent/ButtonComponent";
+import "./Banner.css";
 
 const Banner = () => {
   return (

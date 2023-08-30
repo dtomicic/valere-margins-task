@@ -1,4 +1,3 @@
-import React from "react";
 import ButtonComponent from "../ButtonComponent/ButtonComponent";
 import { IMovie } from "../../types/MovieTypes";
 import { useFavoritesContext } from "../../context/FavoritesContext";

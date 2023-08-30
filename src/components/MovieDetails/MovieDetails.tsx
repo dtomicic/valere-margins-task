@@ -1,7 +1,7 @@
 import Image from "react-bootstrap/Image";
 import { IMovie } from "../../types/MovieTypes";
-import "./MovieDetails.css";
 import FavoriteButton from "../FavoriteButton/FavoriteButton";
+import "./MovieDetails.css";
 
 interface IMovieDetailsProps {
   movieDetails: IMovie;

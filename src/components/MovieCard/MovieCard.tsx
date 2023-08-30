@@ -1,8 +1,8 @@
-import Image from "react-bootstrap/Image";
-import "./MovieCard.css";
-import { IMovie } from "../../types/MovieTypes";
 import { Link } from "react-router-dom";
+import Image from "react-bootstrap/Image";
+import { IMovie } from "../../types/MovieTypes";
 import FavoriteButton from "../FavoriteButton/FavoriteButton";
+import "./MovieCard.css";
 
 interface IMovieCardProps {
   movie: IMovie;
