@@ -59,7 +59,11 @@ const NewestMovies = () => {
         <GenreSelect onGenreSelect={handleGenreSelect} />
         <YearFilter onYearSelect={handleYearSelect} />
       </div>
-      <VerticalList data={filteredMovies} />
+      {filteredMovies.length > 0 ? (
+        <VerticalList data={filteredMovies} />
+      ) : (
+        <p>No movies found</p>
+      )}
     </div>
   );
 };

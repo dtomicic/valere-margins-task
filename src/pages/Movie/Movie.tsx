@@ -20,9 +20,9 @@ const Movie = () => {
     return <div>Loading...</div>;
   }
   return (
-    <div>
+    <section>
       <MovieDetails movieDetails={movieDetails} />
-    </div>
+    </section>
   );
 };
 
