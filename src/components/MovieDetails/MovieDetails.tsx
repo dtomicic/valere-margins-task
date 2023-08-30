@@ -4,11 +4,11 @@ import "./MovieDetails.css";
 import FavoriteButton from "../FavoriteButton/FavoriteButton";
 
 interface IMovieDetailsProps {
-    movieDetails: IMovie;
+  movieDetails: IMovie;
 }
 
 const MovieDetails = (props: IMovieDetailsProps) => {
-    const { movieDetails } = props;
+  const { movieDetails } = props;
   return (
     <div className="movie-details">
       <div>
@@ -19,8 +19,14 @@ const MovieDetails = (props: IMovieDetailsProps) => {
       </div>
       <div className="movie-details-info">
         <h2>{movieDetails.title}</h2>
-        <p><span className="accented-text">Overview:</span> {movieDetails.overview}</p>
-        <p><span className="accented-text">Release date:</span> {movieDetails.release_date}</p>
+        <p>
+          <span className="accented-text">Overview:</span>{" "}
+          {movieDetails.overview}
+        </p>
+        <p>
+          <span className="accented-text">Release date:</span>{" "}
+          {movieDetails.release_date}
+        </p>
         <FavoriteButton movie={movieDetails} />
       </div>
     </div>
