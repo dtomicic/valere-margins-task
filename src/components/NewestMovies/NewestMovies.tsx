@@ -5,6 +5,7 @@ import { fetchPaginatedData } from "../../utils/Api";
 import "./NewestMovies.css";
 import GenreSelect from "../GenreSelect/GenreSelect";
 import YearFilter from "../YearFilter/YearFilter";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 const NewestMovies = () => {
   const [newestMovies, setNewestMovies] = React.useState<IMovie[]>([]);
@@ -62,7 +63,7 @@ const NewestMovies = () => {
       {filteredMovies.length > 0 ? (
         <VerticalList data={filteredMovies} />
       ) : (
-        <p>No movies found</p>
+        <ErrorMessage message="No movies found!" />
       )}
     </div>
   );

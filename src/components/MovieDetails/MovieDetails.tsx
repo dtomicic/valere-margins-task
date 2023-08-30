@@ -13,7 +13,7 @@ const MovieDetails = (props: IMovieDetailsProps) => {
     <div className="movie-details">
       <div>
         <Image
-          src={`https://image.tmdb.org/t/p/w300/${movieDetails.poster_path}`}
+          src={movieDetails.poster_path ? `https://image.tmdb.org/t/p/w300/${movieDetails.poster_path}` : "/images/image_not_found.png"}
           alt={`Poster for ${movieDetails.title}`}
         />
       </div>

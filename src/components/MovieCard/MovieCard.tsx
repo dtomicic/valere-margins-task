@@ -11,6 +11,8 @@ interface IMovieCardProps {
 const MovieCard = (props: IMovieCardProps) => {
   const { movie } = props;
 
+  console.log(movie.poster_path)
+
   return (
     <div className="movie-card">
       <FavoriteButton
@@ -19,7 +21,7 @@ const MovieCard = (props: IMovieCardProps) => {
       />
       <Link to={`/movie/${movie.id}`}>
         <Image
-          src={`https://image.tmdb.org/t/p/w185/${movie.poster_path}`}
+          src={movie.poster_path ? `https://image.tmdb.org/t/p/w185/${movie.poster_path}` : "/images/image_not_found.png"}
           alt={`Poster for ${movie.title}`}
         />
       </Link>
