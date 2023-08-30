@@ -5,4 +5,5 @@ export interface IMovie {
     release_date: string;
     overview: string;
     genre_ids: number[];
+    status_code?: number;
 }
