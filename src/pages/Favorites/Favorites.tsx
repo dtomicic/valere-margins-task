@@ -1,4 +1,3 @@
-import React from "react";
 import { useFavoritesContext } from "../../context/FavoritesContext";
 import FavoritesList from "../../components/FavoritesList/FavoritesList";
 

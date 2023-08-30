@@ -1,4 +1,3 @@
-import React from "react";
 import PopularMovies from "../../components/PopularMovies/PopularMovies";
 import NewestMovies from "../../components/NewestMovies/NewestMovies";
 
