@@ -13,7 +13,11 @@ const FavoritesDropdown = () => {
   const renderFavorites = favoritesToRender.map((movie: IMovie) => (
     <NavDropdown.Item key={movie.id} href={`/movie/${movie.id}`}>
       <Image
-        src={`https://image.tmdb.org/t/p/w185/${movie.poster_path}`}
+        src={
+          movie.poster_path
+            ? `https://image.tmdb.org/t/p/w185/${movie.poster_path}`
+            : "/images/image_not_found.png"
+        }
         alt={`Poster for ${movie.title}`}
         className="favorites-dropdown-poster"
       />

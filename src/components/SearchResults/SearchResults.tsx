@@ -1,6 +1,7 @@
 import VerticalList from "../VerticalList/VerticalList";
 import { IMovie } from "../../types/MovieTypes";
 import "./SearchResults.css";
+import ErrorMessage from "../ErrorMessage/ErrorMessage";
 
 interface ISearchResultsProps {
   searchQuery: string;
@@ -17,7 +18,7 @@ const SearchResults = (props: ISearchResultsProps) => {
       {searchResults.length > 0 ? (
         <VerticalList data={searchResults} />
       ) : (
-        <p>No results found</p>
+        <ErrorMessage message="No results found!" />
       )}
     </div>
   );
