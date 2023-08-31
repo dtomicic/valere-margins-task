@@ -10,9 +10,6 @@ interface IMovieCardProps {
 
 const MovieCard = (props: IMovieCardProps) => {
   const { movie } = props;
-
-  console.log(movie.poster_path)
-
   return (
     <div className="movie-card">
       <FavoriteButton
