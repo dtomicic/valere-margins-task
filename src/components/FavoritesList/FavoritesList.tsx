@@ -1,4 +1,3 @@
-import React from "react";
 import { IMovie } from "../../types/MovieTypes";
 import VerticalList from "../VerticalList/VerticalList";
 import "./FavoritesList.css";

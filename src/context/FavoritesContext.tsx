@@ -1,10 +1,4 @@
-import React, {
-  createContext,
-  useContext,
-  useState,
-  ReactNode,
-  useEffect,
-} from "react";
+import React from "react";
 import { IMovie } from "../types/MovieTypes";
 
 interface IFavoritesContext {
@@ -12,25 +6,25 @@ interface IFavoritesContext {
   toggleFavorite: (movie: IMovie) => void;
 }
 
-const FavoritesContext = createContext<IFavoritesContext>({
+const FavoritesContext = React.createContext<IFavoritesContext>({
   favorites: [],
   toggleFavorite: () => {},
 });
 
 export const useFavoritesContext = () => {
-  return useContext(FavoritesContext);
+  return React.useContext(FavoritesContext);
 };
 
 interface FavoritesProviderProps {
-  children: ReactNode;
+  children: React.ReactNode;
 }
 
 export const FavoritesProvider: React.FC<FavoritesProviderProps> = ({
   children,
 }) => {
-  const [favorites, setFavorites] = useState<IMovie[]>([]);
+  const [favorites, setFavorites] = React.useState<IMovie[]>([]);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const storedFavorites = JSON.parse(
       localStorage.getItem("favorites") || "[]"
     );
